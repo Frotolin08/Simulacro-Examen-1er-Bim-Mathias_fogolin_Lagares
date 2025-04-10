@@ -5,7 +5,7 @@ using UnityEngine;
 public class heladeriaScript : MonoBehaviour
 {
     public string gusto;
-    public float peso;
+    public int peso;
     float precio;
     // Start is called before the first frame update
     void Start()
@@ -14,12 +14,12 @@ public class heladeriaScript : MonoBehaviour
         {
             if (gusto == "FRU")
             {
-                precio = (((peso / 1000) * 500) / 100) * 90;
+                precio = (peso * 0.5f)*0.9f;
 
             }
             else if (gusto == "CHO" || gusto == "DDL")
             {
-                precio = (peso / 1000) * 500;
+                precio = peso * 0.5f;
 
             }
 
